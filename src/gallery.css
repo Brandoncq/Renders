@@ -1,0 +1,97 @@
+h1 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+  }
+  .project:hover{
+    background-color: #6a6969;
+  }
+  .tipos:hover{
+    background-color: #6a6969;
+  }
+  .image-card{
+    border: 0.5px solid #6a6969;
+  }
+  .img-fluid{ 
+    padding: 5px;
+  }
+  .img-fluid:hover{
+    background-color: #ffffff;
+  }
+.imagen-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .imagen-light{
+    position: fixed;
+    background: rgba(0, 0, 0, .6);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+}
+.agregar-imagen{
+    object-fit: cover;
+    height: 95%;
+    width: auto;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+.show{
+    transform: translate(0);
+}
+.showimage{
+    transform: scale(1);
+}
+.close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.ocultar{
+    display: grid;
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateY(100%);
+    transition: all 0.5s;
+  }
+.mostrar{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+.icono{
+    font-size: 6em;
+  }
+@media (max-width: 768px) {
+    .agregar-imagen{
+        width: 95%;
+        height: auto;
+    }
+    .icono{
+      font-size: 3em;
+    }
+}
+@media (orientation: landscape) {
+
+    .agregar-imagen {
+        height: 95%;
+        width: auto;
+    }
+}
